@@ -21,5 +21,5 @@
     1. Клонируем или скачиваем репозиторий
     2. Переходим в папку с проектом ( cd ./weatherforecast ) 
     3. Собираем docker образ ( sudo docker build -t weatherforecast . )
-    4. Запустите Docker-контейнер ( docker run -p 8000:8000 weather-forecast )
+    4. Запустите Docker-контейнер ( sudo docker run -p 8000:8000 weatherforecast )
     5. В браузере открыть http://127.0.0.1:8000
