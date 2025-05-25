@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python-style cURL/Fetch Converter</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+</head>
+<body>
+    <div>
+        <b><span id="id_weather">Weather: </span></b><br><br>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" oninput="suggest_city()" autocomplete="off">
+        <button onclick="send()">Send</button>
+        <div id="suggestions"></div>
+
+        {% if last_city %}
+        <p>
+            <a href="/weather" onclick="send('{{ last_city }}'); return false;">
+                Show the weather in: "{{ last_city }}"
+            </a>
+        </p>
+        {% endif %}
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
